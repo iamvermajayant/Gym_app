@@ -5,7 +5,7 @@ import {useState, useEffect} from 'react';
 import {exerciseOptions, fetchData} from '../utils/fetchData';
 import ExerciseCard from './ExerciseCard';
 
-const Exercises = ({exercises,setExercises, bodyPart }) => {
+const Exercises = ({exercises, setExercises, bodyPart }) => {
   console.log(exercises);
   return (
     <Box sx={{mt: {lg : '110px'}}}
@@ -18,7 +18,7 @@ const Exercises = ({exercises,setExercises, bodyPart }) => {
     <Stack direction="row" sx={{gap : {lg :  '110px', xs : '50px'}}} flexWrap="wrap" justifyContent="center">
       {exercises.map((exercise, index) => (
        <p>
-        {exercise.name}
+        {exercise.bodyPart}
        </p>
       ))}
     </Stack>
