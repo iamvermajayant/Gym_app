@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Box, Stack, Typography, Button } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import HeroBannerImage from "../assets/assets/images/banner.png";
 import HeroBannerImage2 from "../assets/assets/images/Title2.jpg";
 import HeroBannerImage3 from "../assets/assets/images/Title3.jpg";
@@ -30,6 +30,7 @@ const HeroBanner = () => {
     },10000)
 
     return () => clearInterval(intervalId);
+    // eslint-disable-next-line
   },[])
   return (
     <Box

@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Box, Stack, Button } from "@mui/material";
+import { Typography, Stack, Button } from "@mui/material";
 import BodyPartImage from "../assets/assets/icons/body-part.png";
 import TargetImage from "../assets/assets/icons/target.png";
 import Equiptment from "../assets/assets/icons/equipment.png";
