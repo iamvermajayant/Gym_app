@@ -1,13 +1,42 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography, Button } from "@mui/material";
 import HeroBannerImage from "../assets/assets/images/banner.png";
+import HeroBannerImage2 from "../assets/assets/images/Title2.jpg";
+import HeroBannerImage3 from "../assets/assets/images/Title3.jpg";
+import HeroBannerImage4 from "../assets/assets/images/Title4.jpg";
+import HeroBannerImage5 from "../assets/assets/images/Title5.jpg";
+import HeroBannerImage6 from "../assets/assets/images/Title6.jpg";
+import HeroBannerImage7 from "../assets/assets/images/Title7.jpg";
+
+
+
 
 const HeroBanner = () => {
+  const ImagesBanner = [
+    HeroBannerImage,
+    HeroBannerImage2,
+    HeroBannerImage3,
+    HeroBannerImage4,
+    HeroBannerImage5,
+    HeroBannerImage6,
+    HeroBannerImage7,
+  ];
+  
+  const [currentImage, setCurrentImage] = useState(HeroBannerImage2);
+  
+  useEffect(()=>{
+    const intervalId = setInterval(()=>{
+      setCurrentImage(ImagesBanner[Math.floor(Math.random() * ImagesBanner.length)])
+    },10000)
+
+    return () => clearInterval(intervalId);
+  },[])
   return (
     <Box
       sx={{ mt: { lg: "150px", xs: "70px" }, ml: { sm: "50px" } }}
       position="relative"
       p="20px"
+      direction="row"
     >
       <Typography color="#FF2625" fontWeight="600" fontSize="26px">
         Fitness Club
@@ -36,14 +65,13 @@ const HeroBanner = () => {
       </Button>
       <Typography
         fontWeight="600"
-        fontSize=""
         color="#ff2625"
         fontSize="200px"
         sx={{ opacity: 0.1, display: { lg: "block", xs: "none" } }}
       >
         Exercise
       </Typography>
-      <img src={HeroBannerImage} alt="bannerimg" className="hero-banner-img" />
+      <img src={currentImage} alt = {currentImage} className="hero-banner-img" />
     </Box>
   );
 };

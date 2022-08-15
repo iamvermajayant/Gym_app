@@ -13,6 +13,8 @@ body {
   ::-webkit-scrollbar {
     width: 0px;
   }
+
+  
   
   .right-arrow,
   .left-arrow {
@@ -55,12 +57,12 @@ body {
   
   .hero-banner-img {
     position: absolute;
-    right: 90px;
+    right: 160px;
     top: 90px;
-    width: 650px;
+    width: 600px;
     height: 700px;
     margin-top: -330px;
-  
+    border-bottom-left-radius: 7rem;
   }
   
   .exercise-card {

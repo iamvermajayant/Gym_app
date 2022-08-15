@@ -6,7 +6,7 @@ import Loader from "./Loader";
 const SimilarExercise = ({ similarExercise, equipmentExercise }) => {
   return (
     <Box sx={{ mt: { lg: "100px", xs: "0px" } }}>
-      <Typography variant="h3" mb="3rem" textTransform="capitalize">
+      <Typography variant="h3" mb="3rem" textTransform="capitalize" ml='3rem'>
         Exercises that target the same muscle group
       </Typography>
       <Stack direction="row" mb="7rem" sx={{ p: "2", position: "relative" }}>
@@ -16,7 +16,7 @@ const SimilarExercise = ({ similarExercise, equipmentExercise }) => {
           <Loader />
         )}
       </Stack>
-      <Typography variant="h3" mb="3rem" textTransform="capitalize">
+      <Typography variant="h3" mb="3rem" textTransform="capitalize" ml='3rem'>
         Exercises that uses the same equipment 
       </Typography>
       <Stack direction="row" sx={{ p: "2", position: "relative" }}>
